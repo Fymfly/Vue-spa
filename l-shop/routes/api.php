@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+// 显示商品
 Route::get('/goods', 'GoodsController@index');
 
 // 注册
@@ -31,4 +31,10 @@ Route::middleware(['jwt'])->group( function () {
 
     // 下订单
     Route::post('orders','MemberController@order');
+
+
+    // 收件人地址-显示
+    Route::get('address','AddressController@index');
+    // 收件人地址-添加
+    Route::post('address','AddressController@insert');
 });
