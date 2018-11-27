@@ -32,9 +32,14 @@ Route::middleware(['jwt'])->group( function () {
     // 下订单
     Route::post('orders','MemberController@order');
 
-
     // 收件人地址-显示
     Route::get('address','AddressController@index');
     // 收件人地址-添加
     Route::post('address','AddressController@insert');
+});
+
+
+// 生成订单号
+Route::get('testSN', function() {
+    return getOrderSN();
 });
