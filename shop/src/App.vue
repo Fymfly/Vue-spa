@@ -8,3 +8,16 @@
   @import './assets/base.css';
   @import './assets/style.css';
 </style>
+
+<script>
+export default {
+  created() {
+    this.axios.get('http://127.0.0.1:8001/api/goods')
+      .then((res)=>{
+        console.log( res.data )
+      }).catch((err)=>{
+        console.log( err.response )
+      })
+  }
+}
+</script>

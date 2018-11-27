@@ -2,7 +2,7 @@
     <div>
 
         <header class="top-header">
-            <a class="text texta" href="index.html">取消</a>
+            <router-link to="/" class="text texta">取消</router-link> 
             <h3>登录</h3>
             <router-link to="regist" class="text">注册</router-link>
         </header>

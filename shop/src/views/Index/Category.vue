@@ -1,107 +1,144 @@
 <template>
     <div>
-        <header class="top-header fixed-header">
-		<a class="icona" href="javascript:history.go(-1)">
-				<img src="../../assets/images/left.png"/>
-			</a>
-		<h3>男装专区</h3>
-			
-			<a class="iconb" href="shopcar.html">
-				<img src="../../assets/images/shopbar.png"/>
-			</a>
-	</header>
-	
-	<div class="contaniner fixed-conta">
-		<section class="list">
-			<figure><img src="../../assets/images/list-ban01.png"/></figure>
-			<div class="search">
-				<input type="search" placeholder="韩版卫衣" />
-				<label><img src="../../assets/images/list-search.png"/></label>
-			</div>
-			<nav>
+		<header class="page-header fixed-header">
+			<input type="search"  /> 
+			<span>
+				<img src="../../assets/images/serach.png"/>
+			</span>
+		</header>
+		
+		<div class="contaniner fixed-cont">
+			<aside class="assort">
 				<ul>
-					<li>
-						<a href="#">
-							<span>全部</span>
-						</a>
-					</li>
-					<li class="list-active">
-						<a href="#">
-							<span>销量</span>
-							<img src="../../assets/images/up-red.png"/>
-						</a>
+					<li class="active">
+						<img src="../../assets/images/classify01.png"/>
+						<span>母婴用品</span>
 					</li>
 					<li>
-						<a href="#">
-							<span>价格</span>
-						</a>
+						<img src="../../assets/images/classify02.png"/>
+						<span>女装正品</span>
 					</li>
 					<li>
-						<a href="#">
-							<span>评价</span>
-						</a>
+						<img src="../../assets/images/classify03.png"/>
+						<span>男装正品</span>
+					</li>
+					<li>
+						<img src="../../assets/images/classify04.png"/>
+						<span>内衣服饰</span>
+					</li>
+					<li>
+						<img src="../../assets/images/classify05.png"/>
+						<span>化妆品</span>
+					</li>
+					<li>
+						<img src="../../assets/images/classify06.png"/>
+						<span>居家百货</span>
+					</li>
+					<li>
+						<img src="../../assets/images/classify07.png"/>
+						<span>时尚智能</span>
+					</li>
+					<li>
+						<img src="../../assets/images/classify08.png"/>
+						<span>营养保健</span>
+					</li>
+					<li>
+						<img src="../../assets/images/classify09.png"/>
+						<span>女鞋箱包</span>
 					</li>
 				</ul>
-			</nav>
-			<ul class="wall">
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph01.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
+			</aside>
+			
+			<section class="assort-cont">
+				<figure>
+					<a href="#">
+						<img src="../../assets/images/classify-ph01.png"/>
+					</a>
+				</figure>
+				<dl>
+					<dt>宝宝营养</dt>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph02.png"/>
+							<p>DNA</p>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph03.png"/>
+							<p>钙剂</p>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph02.png"/>
+							<p>DNA</p>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph03.png"/>
+							<p>钙剂</p>
+						</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>妈妈专区</dt>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph04.png"/>
+							<p>DNA</p>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph05.png"/>
+							<p>钙剂</p>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph04.png"/>
+							<p>DNA</p>
+						</a>
+					</dd>
+					<dd>
+						<a href="#">
+							<img src="../../assets/images/classify-ph05.png"/>
+							<p>钙剂</p>
+						</a>
+					</dd>
+				</dl>
+			</section>
+		</div>
+		
+		<footer class="page-footer fixed-footer">
+			<ul>
+				<li>
+					<a href="index.html">
+						<img src="../../assets/images/footer001.png"/>
+						<p>首页</p>
 					</a>
 				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph02.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
+				<li class="active">
+					<a href="assort.html">
+						<img src="../../assets/images/footer02.png"/>
+						<p>分类</p>
 					</a>
 				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph01.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
+				<li>
+					<a href="shopcar.html">
+						<img src="../../assets/images/footer003.png"/>
+						<p>购物车</p>
 					</a>
 				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph02.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
-					</a>
-				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph01.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
-					</a>
-				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph02.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
-					</a>
-				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph01.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
-					</a>
-				</li>
-				<li class="pic">
-					<a href="detail.html">
-						<img src="../../assets/images/list-ph02.png"/>
-						<p>韩版青少年休闲修身长袖紧身衬衫</p>
-						<b>￥58</b><del>￥538</del>
+				<li>
+					<a href="self.html">
+						<img src="../../assets/images/footer004.png"/>
+						<p>个人中心</p>
 					</a>
 				</li>
 			</ul>
-		</section>
-	</div>
+		</footer>
     </div>
 </template>
