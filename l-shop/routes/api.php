@@ -29,13 +29,19 @@ Route::post('authorizations','MemberController@login');
 // 令牌
 Route::middleware(['jwt'])->group( function () {
 
-    // 下订单
-    Route::post('orders','MemberController@order');
-
     // 收件人地址-显示
     Route::get('address','AddressController@index');
     // 收件人地址-添加
     Route::post('address','AddressController@insert');
+
+
+    // 下订单
+    Route::post('orders', 'OrderController@insert');
+
+    // 获取我的订单信息
+    Route::get('orders', 'OrderController@index');    
+
+    
 });
 
 
