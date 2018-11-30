@@ -28,14 +28,21 @@ export default new Router({
         {
           path: 'cart',
           name: 'cart',
-          component: () => import('./views/Index/Cart.vue')
+          component: () => import('./views/Index/Cart.vue'),
+          meta: {
+            needLogin :true
+          }
         },
         ,
         // 个人中心
         {
           path: 'profile',
           name: 'profile',
-          component: () => import('./views/Index/Profile.vue')
+          component: () => import('./views/Index/Profile.vue'),
+          // 放辅助用的自定义数据
+          meta: {
+            needLogin :true
+          }
         },
       ]
     },

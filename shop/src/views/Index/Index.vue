@@ -6,6 +6,13 @@
 	
 	<div class="contaniner fixed-contb">
 		<figure class="ban swiper-container">
+			<wv-swipe :height="200" :autoplay="5000">
+				<wv-swipe-item><img src="../../assets/images/index-ban01.png"/></wv-swipe-item>
+				<wv-swipe-item><img src="../../assets/images/index-ban02.png"/></wv-swipe-item>
+				<wv-swipe-item><img src="../../assets/images/index-ban03.png"/></wv-swipe-item>
+			</wv-swipe>
+		</figure>
+		<!-- <figure class="ban swiper-container">
 			<ul class="swiper-wrapper">
 				<li class="swiper-slide">
 					<a href="#">
@@ -23,7 +30,7 @@
 					</a>
 				</li>
 			</ul>
-		</figure>
+		</figure> -->
 		
 		<section class="shop">
 			<h3>
