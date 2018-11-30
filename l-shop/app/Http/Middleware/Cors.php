@@ -19,7 +19,8 @@ class Cors
         $origin = $request->server('HTTP_ORIGIN') ? $request->server('HTTP_ORIGIN') : '';
         // 允许访问的域名列表
         $allow_origin = [
-            'http://localhost:8080',
+            'http://localhost:8080',    
+            'http://127.0.0.1:8080',   
         ];
         // 通过 $response->header 设置协议头
         // (扩展：如果想要允许所有域名跨域访问，就可以去掉if判断，然后
