@@ -39,6 +39,13 @@
 
 
 <script>
+
+// 注册成功
+import { Dialog } from 'we-vue'
+
+// 注册失败
+import { Toast } from 'we-vue'
+
 export default {
     data() {
       return {
@@ -54,10 +61,19 @@ export default {
         this.axios.post('/members', this.form)
             .then(res=>{
               if( res.data.status_code == 200) {
-                this.$router.push('/login')
+                Dialog({
+                  message: '欢迎加入！',
+                  skin: 'ios'
+                }).then(res=>{
+                  // 跳转登录页
+                  this.$router.push('/login')
+                })
               } else {
 
-                alert('失败')
+                Toast.fail({
+                  duration: 2000,
+                  message: '账号或密码格式不正确'
+                })
               }
             })
       }
