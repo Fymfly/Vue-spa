@@ -9,8 +9,10 @@ import VueAxios from 'vue-axios'
 
 import 'we-vue/lib/style.css'
 
-import { Swipe, SwipeItem } from 'we-vue'
+import { Swipe, SwipeItem, Loadmore, InfiniteScroll  } from 'we-vue'
 
+Vue.use(InfiniteScroll)
+Vue.use(Loadmore)
 Vue.use(Swipe).use(SwipeItem)
 
 // 注册导航守卫（没次加载一个页面就会被自动被执行）
