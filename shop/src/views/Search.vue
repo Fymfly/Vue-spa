@@ -49,11 +49,11 @@
             infinite-scroll-distance="50"
         >
           <li class="pic" v-for="(v,k) in goods" :key="k">
-            <a href="detail.html">
+            <router-link :to="'/goods?id=' + v.id">
               <img :src="v.logo"/>
               <p>{{v.goods_name}}</p>
               <b>￥{{v.skus[0].price}}</b>
-            </a>
+            </router-link>
           </li>
         </ul>
         <wv-loadmore v-if="isLastPage" type="line" text="loading"></wv-loadmore>

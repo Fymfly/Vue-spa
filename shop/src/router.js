@@ -46,20 +46,29 @@ export default new Router({
         },
       ]
     },
+    // 注册
     {
       path: '/regist',
       name: 'regist',
       component: () => import('./views/Regist.vue')
     },
+    // 登录
     {
       path: '/login',
       name: 'login',
       component: () => import('./views/Login.vue')
     },
+    // 搜索
     {
       path: '/search',
       name: 'search',
       component: () => import('./views/Search.vue')
+    },
+    // 商品详情页
+    {
+      path: '/goods',
+      name: 'goods',
+      component: () => import('./views/Goods.vue')
     }
 
   ]
