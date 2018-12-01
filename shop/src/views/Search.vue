@@ -24,10 +24,11 @@
                 <span>全部</span>
               </a>
             </li>
-            <li class="list-active">
+            <li @click="setSort('id')" class="list-active">
               <a href="#">
-                <span>销量</span>
-                <img src="../assets/images/up-red.png"/>
+                <span>新品</span>
+                <img v-if="search.order=='desc'" src="../assets/images/up-red.png"/>
+                <img v-else src="../assets/images/down-red.png"/>
               </a>
             </li>
             <li>
@@ -69,7 +70,7 @@ export default {
     return {
       search:{
         "page":1,
-        "per_page":1,
+        "per_page":10,
         "keywords":this.$route.query.keywords,
         "sorby":"id",
         "order":"desc"
@@ -86,6 +87,12 @@ export default {
 
   },
   methods:{
+    setSort(c){
+        // 改变排序方式
+        this.search.order = this.search.order == 'desc' ? 'asc' : 'desc'
+        // 重新 加载数据
+        this.dosearch()
+    },
     //  当滚动条滚动到距离底部50像素时被调用
     loadMore() {
 
@@ -115,12 +122,16 @@ export default {
     },
     dosearch(){
       if( this.$route.query.keywords != "" )
-      {
-        /* 注意：当使用 axios 当 get 请求时，第二个参数必须要放到 params: 里面） */
-        this.axios.get('/goods', {params: this.search})
-            .then(res=>{
-              this.goods = res.data.data
-            })
+      { 
+            // 重新激活自动加载（搜索条件初始化）
+            this.search.page = 1
+            this.isLastPage = false
+            this.disableLoad = false
+            /* 注意：当使用 axios 当 get 请求时，第二个参数必须要放到 params: 里面） */
+            this.axios.get('/goods', {params: this.search})
+                .then(res=>{
+                this.goods = res.data.data
+                })
       }
     }
   }
