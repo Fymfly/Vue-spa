@@ -9,8 +9,9 @@ import VueAxios from 'vue-axios'
 
 import 'we-vue/lib/style.css'
 
-import { Swipe, SwipeItem, Loadmore, InfiniteScroll  } from 'we-vue'
+import { Swipe, SwipeItem, Loadmore, InfiniteScroll, NumberSpinner   } from 'we-vue'
 
+Vue.use(NumberSpinner)
 Vue.use(InfiniteScroll)
 Vue.use(Loadmore)
 Vue.use(Swipe).use(SwipeItem)
