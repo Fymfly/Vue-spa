@@ -11,8 +11,9 @@ class GoodsSku extends Model
     public $timestamps = false;
 
     // 关联商品SKU表
-    public function goods() {
-
-        return $this->belongsTo('App\Models\GoodsSku', 'goods_id');
+    public function goods(){
+        
+        return $this->belongsTo('App\Models\Goods','goods_id');
     }
+
 }

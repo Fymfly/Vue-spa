@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Goods;
+use App\Models\GoodsSku;
 
 class GoodsController extends Controller
 {
@@ -30,18 +31,17 @@ class GoodsController extends Controller
             else 
                 return error('商品不存在', 404);
 
-        } else if($req->ids) {
-
-            $data = Goods::with('attirubtes','images','skus')
-                        ->whereIn('id', explode(',', $req->ids))
-                        ->where('is_on_sale','y')
-                        ->get();
-            if($data)
+        } else if($req->sku_ids){
+            $data = GoodsSku::with('goods')
+                ->whereIn('id',explode(',',$req->sku_ids))
+                ->get();
+            if($data){
                 return ok($data);
-            else
-                return error('商品不存在!', 404);
-                
-        } else {
+            }else{
+                return error('商品不存在',404);
+            } 
+        }
+         else {
 
             // 处理参数
             $perPage = max(1, (int)$req->per_page);
