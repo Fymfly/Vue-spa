@@ -57,6 +57,7 @@ export default {
   created(){
     // 从浏览器中取出购物车数组
     let cart = localStorage.getItem('cart')
+    // console.log(localStorage.getItem('cart'))
     // 如果购物车中有商品
     if(cart)
     {

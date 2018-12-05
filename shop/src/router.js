@@ -11,35 +11,39 @@ export default new Router({
     {
       path: '/',
       component: Index,
-      children:[
+      children: [
         // 首页
         {
           path: '',
           name: 'index',
-          component: () => import('./views/index/Index.vue')
+          component: () => import('./views/Index/Index.vue')
         },
         // 分类
         {
           path: 'category',
           name: 'category',
-          component: () => import('./views/index/Category.vue')
+          component: () => import('./views/Index/Category.vue')
         },
         // 购物车
         {
           path: 'cart',
           name: 'cart',
-          component: () => import('./views/index/Cart.vue')
+          component: () => import('./views/Index/Cart.vue'),
+          meta: {
+            needLogin :true
+          }
         },
+        ,
         // 个人中心
         {
           path: 'profile',
           name: 'profile',
-          component: () => import('./views/index/Profile.vue'),
-          // 放辅助用的自定义的数据
+          component: () => import('./views/Index/Profile.vue'),
+          // 放辅助用的自定义数据
           meta: {
-            needLogin: true
+            needLogin :true
           }
-        }
+        },
       ]
     },
     // 注册
@@ -65,15 +69,7 @@ export default new Router({
       path: '/goods',
       name: 'goods',
       component: () => import('./views/Goods.vue')
-    },
-    // 去下单
-    {
-      path: '/buy',
-      name: 'buy',
-      component: () => import('./views/Buy.vue'),
-      meta: {
-        needLogin: true
-      }
     }
+
   ]
 })

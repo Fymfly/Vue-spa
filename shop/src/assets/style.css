@@ -159,12 +159,12 @@ body{background-color: #f2f2f2;}
 
 /*商品详情页*/
 /*顶部*/
-.detail-header{ width: 90%; padding: 3% 5%; z-index: 2;overflow: hidden;
+.detail-header{ width: 90%; padding: 3% 5%; z-index: 2;overflow: hidden; 
 -webkit-transition:background-color 0.8s ;
 -moz-transition: background-color 0.8s;
 -ms-transition: background-color 0.8s;
 -o-transition: background-color 0.8s;
-transition:background-color 0.8s ;
+transition:background-color 0.8s ;	
 transition: background-color 0.8s; }
 .change{background-color: #fff ; box-shadow: 0 1px 0 #c8c8c8; }
 .change a{background-color: rgba(0,0,0,0); }
@@ -188,11 +188,11 @@ transition: background-color 0.8s; }
 .contaniner .detail .jiage dt .collect p{ color: #666; font-size: 1.169em;}
 
 .contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;}
-.contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;}
+.contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;} 
 .contaniner .detail .jiage dd b{font-size: 1.7em; color: #FC605A; font-weight: normal;}
-.contaniner .detail .jiage .contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;}
+.contaniner .detail .jiage .contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;} 
 .contaniner .detail .jiage dd del{ color: #999; font-size: 1.169em; margin: 0 2%;}
-.contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;}
+.contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;} 
 .contaniner .detail .jiage dd small{color: #999; font-size: 1.169em; margin: 0 2%;}
 .contaniner .detail .jiage dd{ clear: both; width: 90%; padding: 2% 5%;}
 .contaniner .detail .jiage dd input[type="button"]{ font-size: 1.169em; border: none; background-color: #333; color: #fff; border-radius: 0.2em; padding: 1% 3%; padding-left: 8%; background-image: url(./images/detail-you.png); background-repeat: no-repeat; background-size: 16%; background-position: 16%;}
@@ -366,7 +366,7 @@ transition: background-color 0.8s; }
 .change-address ul li input[type="checkbox"] {opacity: 0; position: absolute; right:5%; top:40%; }
 .change-address ul li h3{font-weight: normal; text-align: center; font-size: 1.45em; color: #FC605A; width: 100%;
 }
-.change-address input[type=submit]{ width: 90%; margin:3% 5%; padding: 3% 0; font-size: 1.5em; color: #fff; background-color: #45c018; border: none; border-radius: 0.4em;}
+.change-address input[type=submit]{ width: 90%; margin:3% 5%; padding: 3% 0; font-size: 1.5em; color: #fff; background-color: #45c018; border: none; border-radius: 0.4em;} 
 
 /*全部订单*/
 .order{ width: 100%;}
