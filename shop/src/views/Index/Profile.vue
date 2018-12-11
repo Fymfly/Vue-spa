@@ -100,7 +100,7 @@
 				</li>
 
 			</ul>
-			<a href="login.html"><input type="button" value="退出" /></a>
+			<router-link to="/login"><input type="button" value="退出" /></router-link>
 
 		</section>
 

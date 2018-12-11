@@ -41,7 +41,7 @@ class Jwt
         {
             // 返回错误信息
             return response([
-                'code'=>'403',
+                'status_code'=>'403',
                 'message'=>'HTTP/1.1 403 Forbidden'
             ]);
         }

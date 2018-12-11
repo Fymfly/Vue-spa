@@ -15,9 +15,17 @@
           <dt>{{ v.goods.goods_name }}</dt>
           <dd>{{ v.sku_name }}</dd>
           <div class="add">
+           <!-- <wv-number-spinner
+              :min="1"
+              :max="v.stock"
+              @click="change()"
+              :value="cart.find(v1=>v1.sku_id==v.id).buy_count"
+              v-model="cart[k].buy_count"
+            ></wv-number-spinner> -->
             <span>-</span>
             <input type="text" :value="cart.find(v1=>v1.sku_id==v.id).buy_count" />
             <span>+</span>
+
           </div>
           <h3>￥{{v.price}}</h3>
           <small><img src="../../assets/images/shopcar-icon01.png"/></small>
@@ -86,6 +94,6 @@ export default {
 }
 .page-footer {
   position: fixed;
-  bottom: 64px;
+  bottom: 85px;
 }
 </style>

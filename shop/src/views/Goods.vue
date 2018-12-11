@@ -195,10 +195,13 @@ export default {
     addToCart(){
       // 获取购物车数据
       let cart = localStorage.getItem('cart')
+
       // 将 cart 转成 json
       cart = cart ? JSON.parse(cart) : []
+
       // 获取当前勾选 skuid
       let skuid = this.goods.skus[this.skuSelected].id
+
       // 根据 skuid 从购物车中查找这件商品
       let searchInfo = cart.find((v)=> v.sku_id == skuid)
       if(searchInfo)
@@ -234,7 +237,7 @@ export default {
 </script>
 
 <style>
-.buy-count {
+/* .buy-count {
   background-color: #fff;
   padding: 20px;
   margin-top: 5px;
@@ -242,5 +245,5 @@ export default {
 .buy-count .wv-number-spinner {
   width: 50%;
   float: right;
-}
+} */
 </style>

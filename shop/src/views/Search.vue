@@ -130,7 +130,8 @@ export default {
             /* 注意：当使用 axios 当 get 请求时，第二个参数必须要放到 params: 里面） */
             this.axios.get('/goods', {params: this.search})
                 .then(res=>{
-                this.goods = res.data.data
+                  // console.log(res.data.data)
+                  this.goods = res.data.data
                 })
       }
     }

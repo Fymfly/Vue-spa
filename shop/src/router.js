@@ -69,6 +69,15 @@ export default new Router({
       path: '/goods',
       name: 'goods',
       component: () => import('./views/Goods.vue')
+    },
+    // 去下单
+    {
+      path: '/buy',
+      name: 'buy',
+      component: () => import('./views/Buy.vue'),
+      meta: {
+        needLogin :true
+      }
     }
 
   ]
