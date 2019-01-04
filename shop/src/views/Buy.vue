@@ -12,7 +12,7 @@
         <div class="contaniner fixed-cont">
             <section class="to-buy">
                 <header>
-                    <div v-for="(v,k) in " class="now" v-if="defaultAddress">
+                    <div class="now" v-if="defaultAddress" :key="k">
                         <span><img src="../assets/images/map-icon.png"/></span>
                             <dl>
                                 <dt>
